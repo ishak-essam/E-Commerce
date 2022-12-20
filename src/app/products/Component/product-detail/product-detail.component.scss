@@ -1,0 +1,197 @@
+.box {
+    width: 100%;
+    margin: 100px auto;
+    height: 400px;
+    ul {
+        li {
+            font-size: 14px;
+            margin: 20px 0;
+            strong {
+                font-size: 18px;
+                color: red;
+            }
+        }
+    }
+    img {
+        width: 90%;
+        max-width: 500px;
+        max-height: 500px;
+    }
+    button {
+        position: fixed;
+        width: auto;
+        right: 10%;
+        bottom: 10%;
+    }
+}
+
+.item-list ul li {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 15px;
+    margin: 18px -15px;
+}
+
+.item-list ul li:last-child {
+    border-bottom: 0;
+}
+
+.item-list .item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-list .item-content .item-inner {
+    flex: 1;
+}
+
+.item-list .item-content .item-inner .item-title-row {
+    margin-bottom: 10px;
+}
+
+.item-list .item-content .item-inner .item-title-row .item-subtitle {
+    font-size: 0.875rem;
+}
+
+.item-list .item-content .item-inner .item-footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.item-list .item-content .item-inner .item-footer h6,
+.item-list .item-content .item-inner .item-footer .h6 {
+    margin-bottom: 0;
+}
+
+.item-list .item-content .item-inner .item-footer .fa-star {
+    color: #ffa902;
+    margin-right: 10px;
+}
+
+.item-list .item-content .item-inner .item-footer .off-text {
+    color: #bfc9da;
+}
+
+.item-list .item-content .item-inner .item-footer .off-text h6,
+.item-list .item-content .item-inner .item-footer .off-text .h6 {
+    color: #bfc9da;
+    font-weight: 400;
+}
+
+.item-list .item-content .item-media {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.item-list .item-content .item-media img {
+    border-radius: 9px;
+}
+
+.item-list .item-content .item-bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.item-list.style-2 ul li {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.item-list.style-2 ul li:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.item-list.style-2 .item-content {
+    justify-content: unset;
+    align-items: start;
+}
+
+.item-list.style-2 .item-content .item-inner {
+    width: 20%;
+}
+
+.item-list.style-2 .item-content .item-inner .item-title-row {
+    margin-bottom: 10px;
+}
+
+.item-list.style-2 .item-content .item-inner .item-title-row .item-subtitle {
+    font-size: 0.875rem;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer h6,
+.item-list.style-2 .item-content .item-inner .item-footer .h6 {
+    margin-bottom: 0;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer .fa-star {
+    color: #ffa902;
+    margin-right: 10px;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer .off-text {
+    color: #bfc9da;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer .off-text h6,
+.item-list.style-2 .item-content .item-inner .item-footer .off-text .h6 {
+    color: #bfc9da;
+    font-weight: 400;
+}
+
+.item-list.style-2 .item-content .item-media {
+    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.item-list.style-2 .item-content .item-media img {
+    border-radius: 8px;
+}
+
+.item-list-2 {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin: 10px 0;
+    border-bottom: 2px dashed var(--border-color);
+    padding-bottom: 20px;
+}
+
+.item-list-2 .input-group {
+    margin-bottom: 0;
+}
+
+.item-list-2 .text-style {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.item-list-2 .price {
+    margin-right: 15px;
+}
+
+.item-list-2 .price h3,
+.item-list-2 .price .h3 {
+    margin-bottom: 0;
+}
+
+.item-list-2 .price h3 del,
+.item-list-2 .price .h3 del {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.theme-dark .recent-jobs-list ul li .item-content .item-inner svg path {
+    fill: #fff;
+}

@@ -1,0 +1,32 @@
+nav {
+    background: linear-gradient(to right, rgb(102, 102, 102), black);
+    color: #fff;
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: max-content;
+            margin: 0;
+            li {
+                cursor: pointer;
+                font-size: 20px;
+                color: #fff;
+                padding: 0 15px 0 15px;
+            }
+        }
+    }
+}
+
+h2 {
+    cursor: pointer;
+}
+
+svg {
+    color: wheat;
+    font-size: 30px;
+}

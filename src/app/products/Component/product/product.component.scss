@@ -1,0 +1,200 @@
+.item {
+    max-width: 300px;
+    max-height: 650px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(200, 37, 16, 0.3);
+    transition: all 0.6s ease-in-out;
+    img {
+        width: 100%;
+        height: 50%;
+        border-radius: 10px;
+    }
+    .body {
+        padding-top: 0;
+        display: inline-block;
+    }
+    p {
+        max-height: 50px;
+        overflow: hidden;
+        font-size: 12px;
+        padding: 0px;
+        margin: 0;
+    }
+    h4 {
+        max-height: 20%;
+        overflow: hidden;
+        padding: 2px 2px;
+        font-size: 15px;
+        text-align: center;
+        background-color: #eee;
+        font-weight: 600;
+        margin-top: 0px;
+    }
+    &:hover {
+        transform: scale(1.059);
+    }
+    input {
+        padding: 2px;
+        max-width: 90%;
+    }
+    span {
+        background-color: #f1b4b4;
+        padding: 2px 9px;
+        border-radius: 20%;
+    }
+}
+
+button {
+    border-radius: 2%;
+}
+
+.item-list ul li {
+    border-bottom: 1px solid #2c406e;
+    padding: 0 15px;
+    margin: 18px -15px;
+}
+
+.item-list ul li:last-child {
+    border-bottom: 0;
+}
+
+.item-list .item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-list .item-content .item-inner {
+    flex: 1;
+}
+
+.item-list .item-content .item-inner .item-title-row {
+    margin-bottom: 10px;
+}
+
+.item-list .item-content .item-inner .item-title-row .item-subtitle {
+    font-size: 0.875rem;
+}
+
+.item-list .item-content .item-inner .item-footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.item-list .item-content .item-inner .item-footer h6,
+.item-list .item-content .item-inner .item-footer .h6 {
+    margin-bottom: 0;
+}
+
+.item-list .item-content .item-inner .item-footer .fa-star {
+    color: #ffa902;
+    margin-right: 10px;
+}
+
+.item-list .item-content .item-inner .item-footer .off-text {
+    color: #bfc9da;
+}
+
+.item-list .item-content .item-inner .item-footer .off-text h6,
+.item-list .item-content .item-inner .item-footer .off-text .h6 {
+    color: #bfc9da;
+    font-weight: 400;
+}
+
+.item-list .item-content .item-media {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.item-list .item-content .item-media img {
+    border-radius: 9px;
+    width: 110px;
+    height: 110px;
+}
+
+.item-list .item-content .item-bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.item-list.style-2 ul li {
+    border-bottom: 1px solid #2c406e;
+}
+
+.item-list.style-2 ul li:last-child {
+    border-bottom: 1px solid #2c406e;
+}
+
+.item-list.style-2 .item-content {
+    justify-content: unset;
+    align-items: start;
+}
+
+.item-list.style-2 .item-content .item-inner {
+    width: 20%;
+}
+
+.item-list.style-2 .item-content .item-inner .item-title-row {
+    margin-bottom: 10px;
+}
+
+.item-list.style-2 .item-content .item-inner .item-title-row .item-subtitle {
+    font-size: 0.875rem;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer h6,
+.item-list.style-2 .item-content .item-inner .item-footer .h6 {
+    margin-bottom: 0;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer .fa-star {
+    color: #ffa902;
+    margin-right: 10px;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer .off-text {
+    color: #bfc9da;
+}
+
+.item-list.style-2 .item-content .item-inner .item-footer .off-text h6,
+.item-list.style-2 .item-content .item-inner .item-footer .off-text .h6 {
+    color: #bfc9da;
+    font-weight: 400;
+}
+
+.item-list.style-2 .item-content .item-media {
+    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.item-list.style-2 .item-content .item-media img {
+    border-radius: 8px;
+}
+
+.item-list .list {
+    padding: 6px 0;
+}
+
+.item-list .list a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2c406e;
+}

@@ -1,0 +1,78 @@
+<!-- <div class="item">
+    <div routerLink="{{ data.id }}">
+        <img src="{{ data.image }}" alt=" " />
+        <div class="body">
+            <h4>{{ data.title }}</h4>
+            <p>{{ data.description }}</p>
+        </div>
+    </div>
+    <div class="px-3 mb-2 d-flex justify-content-between align-text-center">
+        <button class="btn btn-success" *ngIf="amount == 0" (click)="amount = 1">
+      Add To Carts
+    </button>
+        <div class="d-flex w-35" *ngIf="amount >= 1">
+            <input type="number" class="form-control" value="{{ amount }}" [(ngModel)]="amount" />
+            <button class="btn btn-danger" (click)="add()">Add</button>
+        </div>
+        <span>{{ data.price }} L.E</span>
+    </div>
+</div> -->
+
+<div class="page-content">
+    <div class="container">
+        <div class="serach-area">
+            <div class="item-list recent-jobs-list">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <h6 class="item-title">
+                                        <a routerLink="{{ data.id }}">{{ data.title }}</a>
+                                    </h6>
+                                </div>
+                                <div class="item-footer">
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="me-3">{{ data.price }} L.E</h6>
+                                        <del class="off-text"><h6>
+                        {{ (data.price * 0.1 + +data.price).toFixed() }} L.E
+                      </h6></del
+                    >
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <span class="fa fa-star checked"></span>
+                    <h6>{{ data.rating.rate }}</h6>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-success"
+                  *ngIf="amount == 0"
+                  (click)="amount = 1"
+                >
+                  Add To Carts
+                </button>
+                <div class="d-flex w-15" *ngIf="amount >= 1">
+                  <input
+                    type="number"
+                    class=""
+                    value="{{ amount }}"
+                    [(ngModel)]="amount"
+                    style="max-width: 10%"
+                  />
+                  <button class="btn btn-danger" (click)="add()">Add</button>
+                </div>
+              </div>
+              <div class="item-media media media-90">
+                <img
+                  src="{{ data.image }}"
+                  alt="logo"
+                  style="max-height: 120px"
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
