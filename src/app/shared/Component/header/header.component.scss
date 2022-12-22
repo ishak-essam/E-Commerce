@@ -1,32 +1,11 @@
-nav {
-    background: linear-gradient(to right, rgb(102, 102, 102), black);
-    color: #fff;
-    .content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            width: max-content;
-            margin: 0;
-            li {
-                cursor: pointer;
-                font-size: 20px;
-                color: #fff;
-                padding: 0 15px 0 15px;
-            }
-        }
-    }
+.example-spacer {
+    flex: 1 1 auto;
 }
 
-h2 {
+span {
     cursor: pointer;
 }
 
-svg {
-    color: wheat;
-    font-size: 30px;
+.mat-toolbar.mat-primary {
+    background-color: #004e89;
 }

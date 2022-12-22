@@ -12,6 +12,9 @@ import { Ends, PasswordKeyWord } from '../emailend';
 export class LoginComponent implements OnInit {
   ngOnInit(): void {}
   item: any = [];
+  index: number = 0;
+  login: boolean = false;
+  LastUser: [] = [];
   LoginForm: boolean = false;
   passerr: boolean = true;
   emailerr: boolean = true;
@@ -35,27 +38,27 @@ export class LoginComponent implements OnInit {
   get Passwords() {
     return this.form.get('Password');
   }
-  clciked(mails: any, passwords: any) {
-    this.service.GetLogin().subscribe((ele: any) => {
-      this.item = ele;
-      console.log(ele);
-      for (let i = 0; i <= Object.keys(ele).length; i++) {
-        if (this.item[i].email == mails) {
-          this.emailerr = true;
-          if (this.item[i].password == passwords) {
-            this.router.navigate(['products']);
-            this.LoginForm = true;
-            this.service.boolLogin = this.LoginForm;
-            this.service.usernameserive = this.item[i].username;
-            this.passerr = true;
-          } else if (this.item[i].password != passwords) {
-            this.passerr = false;
-          }
+  clciked() {
+    this.item = JSON.parse(localStorage.getItem('users')!);
+    for (let i = 0; i <= Object.keys(this.item).length; i++) {
+      if (this.emails?.value == this.item[i]?.email) {
+        if (this.Passwords?.value == this.item[i]?.password) {
+          this.login = true;
+          this.index = i;
+          break;
         }
       }
-    });
-    setTimeout(() => {
+    }
+    if (this.login == true) {
+      this.router.navigate(['products']);
+      this.LoginForm = true;
+      this.service.boolLogin = this.LoginForm;
+      this.LastUser = this.item[this.index];
+      localStorage.setItem('UserLast', JSON.stringify(this.LastUser));
+      this.passerr = true;
+    } else {
       this.emailerr = false;
-    }, 1000);
+      this.passerr = false;
+    }
   }
 }

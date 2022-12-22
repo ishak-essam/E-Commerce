@@ -1,45 +1,78 @@
 <form action="" [formGroup]="form2">
     <div class="form-group">
-        <input type="email" name="logemail" class="form-style" formControlName="Email" placeholder="UserName" id="logemail" autocomplete="off" />
-        <i class="input-icon uil uil-at"></i>
-        <div class="alert alert-danger" style="max-height: 40px; font-size: 12px" *ngIf="emails?.invalid && emails?.touched">
-            <div class="alert alert-danger" style="display: inline-block; padding: 0px" *ngIf="emails?.errors?.['Ends']">
-                Enter Email like A****@gmail.com
-            </div>
-        </div>
-        <!-- <div class="alert alert-danger">
+        <i class="input-icon">
+      <mat-icon style="color: #ff6b35; width: 26px; display: inline-block"
+        >account_box</mat-icon
+      ></i
+    >
+    <input
+      type="text"
+      class="form-style"
+      formControlName="UserName"
+      placeholder="UserName"
+      autocomplete="off"
+    />
+
+    <div
+      class="alert alert-danger"
+      style="max-height: 40px; font-size: 12px"
+      *ngIf="UserName?.invalid && UserName?.touched"
+    >
+      Enter UserName
+    </div>
+
+    <div
+      class="alert alert-danger"
+      style="max-height: 40px; font-size: 12px"
+      *ngIf="UsernameValid"
+    >
+      UserName already exists
+    </div>
+    <div
+      class="alert alert-danger"
+      style="display: inline-block; padding: 0px"
+      *ngIf="UserName?.errors?.['SpaceName']"
+    >
+      UserName must didn't content spaces
+    </div>
+    <!-- <div class="alert alert-danger">
           Email is Wrong
       </div> -->
-    </div>
-    <div class="form-group mt-2">
-        <input type="email" name="logemail" class="form-style" formControlName="Email" #mail placeholder="E-mail" id="logemail" autocomplete="off" />
-        <i class="input-icon uil uil-at"></i>
+  </div>
+  <div class="form-group mt-2">
+    <input
+      type="email"
+      name="logemail"
+      class="form-style"
+      formControlName="Email"
+      placeholder="E-mail"
+      autocomplete="off"
+    />
+    <i class="input-icon uil uil-at"></i>
         <div class="alert alert-danger" style="max-height: 40px; font-size: 12px" *ngIf="emails?.invalid && emails?.touched">
-            <div class="alert alert-danger" style="display: inline-block; padding: 0px" *ngIf="emails?.errors?.['Ends']">
-                Enter Email like A****@gmail.com
+            Enter Email
+
+            <div class="alert alert-danger" style="display: inline-block; padding: 0px" *ngIf="emails?.errors?.[ 'Ends']">
+                Enter Email like E****@gmail.com
             </div>
         </div>
-        <!-- <div class="alert alert-danger">
-            Email is Wrong
-        </div> -->
+
+        <div class="alert alert-danger" style="max-height: 40px; font-size: 12px" *ngIf="EmailValid ==true">
+            Email already exists
+        </div>
     </div>
 
     <div class="form-group mt-2">
-        <input type="password" name="logpass" class="form-style" formControlName="Password" #password placeholder="Password" id="logpass" autocomplete="off" />
+        <input type="password" name="logpass" class="form-style" formControlName="Password" placeholder="Password" id="logpass" autocomplete="off" />
         <i class="input-icon uil uil-lock-alt"></i>
 
         <div class="alert alert-danger" style="max-height: 40px; font-size: 12px" *ngIf="Passwords?.invalid && Passwords?.touched">
-            Captial Charachters or specail charthters
-            <div class="alert alert-danger" *ngIf="Passwords?.errors?.['PasswordKeyWords']">
-                Captial Charachters or specail charthters
-            </div>
+            Enter Password
         </div>
-        <!-- <div class="alert alert-danger" *ngIf="passerr == false">
-            Password is Wrong (click)="clciked(mail.value, password.value)"
-        </div> -->
+        <div class="alert alert-danger" *ngIf="Passwords?.errors?.[ 'PasswordKeyWords']">
+            Captial Charachters or specail charthters
+        </div>
+
     </div>
-    <a class="btn mt-4">Enter</a>
-    <p class="mb-0 mt-4 text-center">
-        <a href="#0 " class="link">Forget a password?</a>
-    </p>
+    <a class="btn mt-4" (click)="clciked()">Enter</a>
 </form>

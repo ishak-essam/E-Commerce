@@ -62,19 +62,29 @@ export class ProductsComponent implements OnInit {
     );
   }
   AddToCart(data: any) {
-    if ('cart' in localStorage) {
-      this.CartProdcut = JSON.parse(localStorage.getItem('cart')!);
+    if (`cart ${JSON.parse(localStorage.getItem('UserLast')!).id}` in localStorage) {
+      this.CartProdcut = JSON.parse(
+        localStorage.getItem(
+          `cart ${JSON.parse(localStorage.getItem('UserLast')!).id}`
+        )!
+      );
       let exit = this.CartProdcut.find((item) => item.item.id == data.item.id);
       if (exit) {
         alert('Product is already in ur cart');
       } else {
         this.CartProdcut.push(data);
-        localStorage.setItem('cart', JSON.stringify(this.CartProdcut));
-        alert('Product' + data.title + '  added in ur cart');
+        localStorage.setItem(
+          `cart ${JSON.parse(localStorage.getItem('UserLast')!).id}`,
+          JSON.stringify(this.CartProdcut)
+        );
+        alert('Product added in ur cart');
       }
     } else {
       this.CartProdcut.push(data);
-      localStorage.setItem('cart', JSON.stringify(this.CartProdcut));
+      localStorage.setItem(
+        `cart ${JSON.parse(localStorage.getItem('UserLast')!).id}`,
+        JSON.stringify(this.CartProdcut)
+      );
     }
   }
 }

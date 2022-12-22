@@ -10,7 +10,6 @@ export class ProductComponent {
   amount: number = 0;
   add() {
     this.item.emit({ item: this.data, quantity: this.amount });
-    console.log(this.amount);
   }
   chang() {
     this.amount++;

@@ -8,7 +8,6 @@ import { enviromentnt } from 'src/app/Environment/environment/environment.compon
 })
 export class ServiceService {
   boolLogin: boolean = false;
-  usernameserive = '';
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.GetLogin();
@@ -16,4 +15,5 @@ export class ServiceService {
   GetLogin() {
     return this.http.get(enviromentnt.BaseApi + 'users/');
   }
+
 }

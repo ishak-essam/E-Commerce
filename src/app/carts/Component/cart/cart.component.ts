@@ -17,8 +17,10 @@ export class CartComponent implements OnInit {
   TotalPrice: any = 0;
   confirmed: boolean = false;
   GetCartProduct() {
-    if ('cart' in localStorage) {
-      this.CartProdcut = JSON.parse(localStorage.getItem('cart')!);
+    if (
+      `cart ${ JSON.parse(localStorage.getItem('UserLast')!).id}` in localStorage
+    ) {
+      this.CartProdcut = JSON.parse(localStorage.getItem(`cart ${JSON.parse(localStorage.getItem('UserLast')!).id}`)!);
     }
   }
   GetPriceTotal() {
@@ -30,26 +32,26 @@ export class CartComponent implements OnInit {
   }
   minsquantity(quant: number) {
     this.CartProdcut[quant].quantity--;
-    localStorage.setItem('cart', JSON.stringify(this.CartProdcut));
+    localStorage.setItem(`cart ${ JSON.parse(localStorage.getItem('UserLast')!).id}`, JSON.stringify(this.CartProdcut));
     this.GetPriceTotal();
   }
   PlusQuantity(quant: number) {
     this.CartProdcut[quant].quantity++;
-    localStorage.setItem('cart', JSON.stringify(this.CartProdcut));
+    localStorage.setItem(`cart ${JSON.parse(localStorage.getItem('UserLast')!).id}`, JSON.stringify(this.CartProdcut));
     this.GetPriceTotal();
   }
   detect() {
-    localStorage.setItem('cart', JSON.stringify(this.CartProdcut));
+    localStorage.setItem(`cart ${ JSON.parse(localStorage.getItem('UserLast')!).id}`, JSON.stringify(this.CartProdcut));
     this.GetPriceTotal();
   }
   DeleteItem(index: any) {
     this.CartProdcut.splice(index, 1);
-    localStorage.setItem('cart', JSON.stringify(this.CartProdcut));
+    localStorage.setItem(`cart ${ JSON.parse(localStorage.getItem('UserLast')!).id}`, JSON.stringify(this.CartProdcut));
     this.GetPriceTotal();
   }
   Clear() {
     this.CartProdcut = [];
-    localStorage.setItem('cart', JSON.stringify(this.CartProdcut));
+    localStorage.setItem(`cart ${ JSON.parse(localStorage.getItem('UserLast')!).id}`, JSON.stringify(this.CartProdcut));
     this.GetPriceTotal();
     this.TotalPrice = 0;
   }
@@ -58,7 +60,7 @@ export class CartComponent implements OnInit {
       return { productID: ele.item.id, quantity: ele.quantity };
     });
     let model = {
-      userId: 3,
+      userId:  JSON.parse(localStorage.getItem('UserLast')!).id,
       data: new Date(),
       product: products,
     };

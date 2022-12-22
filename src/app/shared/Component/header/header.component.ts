@@ -1,5 +1,3 @@
-import { User } from './../../../../../../HttpBegin/TDF/src/app/trying/user';
-import { LoginComponent } from './../../../user/Component/login/login.component';
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/user/Services/service.service';
 
@@ -10,17 +8,17 @@ import { ServiceService } from 'src/app/user/Services/service.service';
 })
 export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
-  UserName = this.service.usernameserive;
+  UserName = JSON.parse(localStorage.getItem('UserLast')!).username;
   HeaderLogin: boolean = false;
   constructor(public service: ServiceService) {}
 
   clciked() {
-  this.UserName = this.service.usernameserive;
-    return (this.HeaderLogin = this.service.boolLogin);
+    return localStorage.getItem('UserLast') ? true : false;
   }
   clcikedOut() {
     this.HeaderLogin = false;
     this.service.boolLogin = false;
+    localStorage.removeItem('UserLast');
     return;
   }
 }

@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonComponent } from './Component/common/common.component';
 import { REGISTERComponent } from './Component/register/register.component';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [LoginComponent, CommonComponent, REGISTERComponent],
   imports: [
@@ -13,8 +14,9 @@ import { REGISTERComponent } from './Component/register/register.component';
     RouterModule,
     BrowserModule,
     FormsModule,
+    MatIconModule,
     ReactiveFormsModule,
   ],
-  exports: [LoginComponent, ReactiveFormsModule],
+  exports: [LoginComponent, ReactiveFormsModule, MatIconModule],
 })
 export class UserModule {}

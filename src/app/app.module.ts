@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { CartsModule } from './carts/carts.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ProductsModule } from './products/products.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [AppComponent],
   providers: [],
@@ -19,11 +21,13 @@ import { ProductsModule } from './products/products.module';
     SharedModule,
     FormsModule,
     RouterModule,
+    MatToolbarModule,
     CartsModule,
     BrowserModule,
     ProductsModule,
     CartsModule,
     UserModule,
+    BrowserAnimationsModule,
   ],
 })
 export class AppModule {}
