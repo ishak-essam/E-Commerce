@@ -7,8 +7,12 @@ import { ServiceService } from 'src/app/user/Services/service.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  ngOnInit(): void {}
-  UserName = JSON.parse(localStorage.getItem('UserLast')!).username;
+  ngOnInit(): void {
+    if ('UserLast' in localStorage) {
+      this.UserName = JSON.parse(localStorage.getItem('UserLast')!).username;
+    }
+  }
+  UserName =  JSON.parse(localStorage.getItem('UserLast')!);
   HeaderLogin: boolean = false;
   constructor(public service: ServiceService) {}
 

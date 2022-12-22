@@ -1,5 +1,5 @@
 <div class="box" *ngIf="loading">
-    <button class="btn btn-danger float-sm-start" routerLink="products">
+    <button class="btn btn-danger float-sm-start" routerLink="/products">
     Back
   </button>
     <div class="row">
@@ -16,9 +16,12 @@
                     <li>
                         <Strong>Descrption :&#160;</Strong>{{ DataID.description }}</li>
                     <li>
-                        <Strong>Rate :&#160;</Strong>{{ DataID.rating.rate }}</li>
+                        <Strong>Rate :&#160;</Strong>{{ DataID.rating?.rate }}
+                        <span class="fa fa-star checked"></span>
+
+                    </li>
                     <li>
-                        <Strong>Count :&#160;</Strong>{{ DataID.rating.count }}</li>
+                        <Strong>Count :&#160;</Strong>{{ DataID.rating?.count }}</li>
                     <li>
                         <Strong>Price :&#160;</Strong>{{ DataID.price }} L.E</li>
                 </ul>
