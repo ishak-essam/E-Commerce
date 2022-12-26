@@ -12,8 +12,8 @@ export class ServiceService {
   ngOnInit(): void {
     this.GetLogin();
   }
+  ServiceName = '';
   GetLogin() {
     return this.http.get(enviromentnt.BaseApi + 'users/');
   }
-
 }

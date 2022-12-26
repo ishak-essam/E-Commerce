@@ -63,22 +63,18 @@ export class REGISTERComponent implements OnInit {
   clciked() {
     this.UsernameValid == false;
     this.EmailValid == false;
-    console.clear();
-
     for (let i = 0; i <= Object.keys(this.item).length; i++) {
       if (this.item[i]?.email == this.emails?.value) {
         this.EmailValid = true;
-        console.log(this.EmailValid);
         break;
       } else {
         this.EmailValid = false;
       }
       if (this.item[i]?.username == this.UserName?.value) {
         this.UsernameValid = true;
-        console.log(this.UsernameValid);
         break;
       } else {
-        this.EmailValid = false;
+        this.UsernameValid = false;
       }
     }
     console.log(this.EmailValid);

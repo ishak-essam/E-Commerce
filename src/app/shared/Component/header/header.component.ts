@@ -8,12 +8,11 @@ import { ServiceService } from 'src/app/user/Services/service.service';
 })
 export class HeaderComponent implements OnInit {
   ngOnInit(): void {
-    if ('UserLast' in localStorage) {
-      this.UserName = JSON.parse(localStorage.getItem('UserLast')!).username;
-    }
+    this.HeadName = JSON.parse(localStorage.getItem('UserLast')!).username;
   }
-  UserName =  JSON.parse(localStorage.getItem('UserLast')!);
   HeaderLogin: boolean = false;
+  HeadName = JSON.parse(localStorage.getItem('UserLast')!).username;
+
   constructor(public service: ServiceService) {}
 
   clciked() {
@@ -22,7 +21,6 @@ export class HeaderComponent implements OnInit {
   clcikedOut() {
     this.HeaderLogin = false;
     this.service.boolLogin = false;
-    localStorage.removeItem('UserLast');
-    return;
+    return localStorage.removeItem('UserLast');
   }
 }

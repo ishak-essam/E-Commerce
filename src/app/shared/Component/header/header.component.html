@@ -3,8 +3,7 @@
         <mat-toolbar color="primary">
             <span> <h3>My Market</h3></span>
             <span class="example-spacer"></span>
-            <span routerLink="login" *ngIf="!clciked()">Login </span>
-            <span *ngIf="clciked()">UserName :{{ UserName }}
+            <span *ngIf="clciked()">UserName :{{ HeadName}}
       </span>
             <span class="example-spacer" *ngIf="clciked()"></span>
             <button *ngIf="clciked()" style="

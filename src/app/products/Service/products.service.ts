@@ -23,4 +23,7 @@ export class ProductsService implements OnInit {
   GetCatgoryByID(id: any) {
     return this.http.get(enviromentnt.BaseApi + 'products/' + id);
   }
+  createNewCart(model: any) {
+    return this.http.post(enviromentnt.BaseApi + 'carts', model);
+  }
 }

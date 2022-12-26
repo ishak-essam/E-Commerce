@@ -44,18 +44,20 @@ export class LoginComponent implements OnInit {
       if (this.emails?.value == this.item[i]?.email) {
         if (this.Passwords?.value == this.item[i]?.password) {
           this.login = true;
+          this.service.ServiceName = this.item[i]?.username;
+          console.log(this.service.ServiceName);
           this.index = i;
           break;
         }
       }
     }
     if (this.login == true) {
-      this.router.navigate(['products']);
       this.LoginForm = true;
       this.service.boolLogin = this.LoginForm;
       this.LastUser = this.item[this.index];
       localStorage.setItem('UserLast', JSON.stringify(this.LastUser));
       this.passerr = true;
+      this.router.navigate(['products']);
     } else {
       this.emailerr = false;
       this.passerr = false;

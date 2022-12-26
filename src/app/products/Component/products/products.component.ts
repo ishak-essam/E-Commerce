@@ -71,7 +71,8 @@ export class ProductsComponent implements OnInit {
       let exit = this.CartProdcut.find((item) => item.item.id == data.item.id);
       if (exit) {
         alert('Product is already in ur cart');
-      } else {
+      }
+       else {
         this.CartProdcut.push(data);
         localStorage.setItem(
           `cart ${JSON.parse(localStorage.getItem('UserLast')!).id}`,
